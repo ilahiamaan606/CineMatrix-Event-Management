@@ -2,7 +2,7 @@ import os
 from dotenv import load_dotenv
 from mongoengine import connect , Document, StringField, ReferenceField, IntField, ListField ,DateField
 
-load_dotenv()
+load_dotenv() 
 
 connect('Easy_Book_App', host=os.getenv("MONGO_URL"))
 
