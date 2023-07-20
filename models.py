@@ -27,13 +27,6 @@ class Movie(Document):
     image_cover = StringField()
     rating = IntField()
 
-class Theater(Document):
-    name = StringField(required=True)
-    address = StringField()
-    city = StringField()
-    state = StringField()
-    capacity = IntField()
-
 class Show(Document):
     movie_id = ReferenceField(Movie, required=True)
     theater_id = ReferenceField(Theater, required=True)
