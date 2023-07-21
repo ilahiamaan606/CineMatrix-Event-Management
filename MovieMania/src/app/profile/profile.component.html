@@ -1,0 +1,23 @@
+<!-- user-details.component.html -->
+
+<div class="user-details-container">
+  <h2>User Details</h2>
+  <div class="user-details" *ngIf="user">
+    <div class="avatar">
+      <span>{{ user.username.charAt(0).toUpperCase() }}</span>
+    </div>
+    <p><strong>Name:</strong> {{ user.username }}</p>
+    <p><strong>Email:</strong> {{ user.email }}</p>
+    <!-- Add more user details here as needed -->
+  </div>
+
+  <div *ngIf="!user" class="loading-container">
+    <p>Loading user details...</p>
+  </div>
+</div>
+
+<img
+  class="back_img"
+  src="https://images.pexels.com/photos/1287145/pexels-photo-1287145.jpeg?auto=compress&cs=tinysrgb&w=600"
+  alt=""
+/>

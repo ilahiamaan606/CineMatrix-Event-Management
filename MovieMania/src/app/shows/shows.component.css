@@ -1,0 +1,162 @@
+/* src/app/show/show.component.css */
+
+*{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* Container styles */
+.movie-details-container {
+    display: flex;
+    margin: 20px;
+    padding: 20px;
+    background-color: #d7d7d7;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Left Section (Movie Details) */
+  .left-section {
+    flex: 1;
+    padding-right: 20px;
+  }
+  
+  .left-section h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .left-section p {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+  
+  .left-section img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Right Section (Booking Details) */
+  .right-section {
+    flex: 1;
+    padding-left: 20px;
+  }
+  
+  .right-section h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .right-section p {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+  
+  /* Loading Container */
+  .loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+  }
+  
+  .loading-container p {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  /* No Movie Container */
+  .no-movie {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #777;
+  }
+  
+  /* Background Image */
+  .back_img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.3;
+    z-index: -1;
+  }
+  
+  
+  .back_img{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -10000;
+    opacity: calc(0.5);
+  }
+
+
+.book_show{
+  border: 1px solid black;
+}
+
+/* Add this CSS in your component's CSS file, e.g., shows.component.css */
+
+.right-section {
+  margin-left: 20px; /* Adjust the margin as needed */
+}
+
+.book_show {
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.book_show p {
+  margin: 5px 0;
+}
+
+.book_show button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.book_show button:hover {
+  background-color: #0056b3;
+}
+
+/* YourComponent specific styles */
+.success-snackbar {
+  background-color: green; /* Customize the background color */
+  color: white; /* Customize the text color */
+  font-weight: bold;
+}
+
+.toast {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  opacity: 0.8;
+}

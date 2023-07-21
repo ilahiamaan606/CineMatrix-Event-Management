@@ -1,0 +1,19 @@
+<nav>
+  <div class="logo">
+    <img src="../assets/images/logo.png" alt="" />
+  </div>
+  <h3 class="welcome-heading">
+    Welcome: {{ storedData ? storedData : "Guest" }}👋
+  </h3>
+  <div class="nav_body">
+    <a routerLink="/">Home</a>
+    <a routerLink="/movies">Movies</a>
+    <a routerLink="/events">Events</a>
+    <a routerLink="/profile">Profile</a>
+    <a routerLink="/login">Login</a>
+    <a routerLink="/register">Register</a>
+  </div>
+</nav>
+<hr />
+
+<router-outlet></router-outlet>

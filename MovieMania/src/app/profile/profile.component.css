@@ -1,0 +1,77 @@
+/* user-details.component.css */
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.user-details-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s, transform 0.3s;
+  }
+  .user-details-container:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: scale(1.03);
+    cursor: pointer;
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .user-details {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+  
+  }
+  
+  .avatar {
+    width: 90px;
+    height: 90px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+  }
+  
+  .loading-container {
+    text-align: center;
+    color: #007bff;
+    font-weight: bold;
+  }
+  
+  /* Animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .fade-in {
+    animation: fadeIn 1s;
+  }
+  
+  .back_img{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -10000;
+    opacity: calc(0.3);
+  }
+
+  

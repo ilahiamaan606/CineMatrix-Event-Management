@@ -1,0 +1,50 @@
+<div class="loading-container" *ngIf="loading; else content">
+  <!-- Loading indicator -->
+  <p>Loading...</p>
+</div>
+
+<img
+  class="back_img"
+  src="https://images.pexels.com/photos/3709369/pexels-photo-3709369.jpeg?auto=compress&cs=tinysrgb&w=600"
+  alt=""
+/>
+
+<ng-template #content>
+  <div *ngIf="movie" class="movie-details-container">
+    <!-- Movie Details Section -->
+    <div class="left-section">
+      <h2>{{ movie.Title }}</h2>
+      <p>Year: {{ movie.Year }}</p>
+      <p>Type: {{ movie.Type }}</p>
+      <img [src]="movie.Poster" alt="{{ movie.Title }}" />
+      <!-- Add more details here as needed -->
+    </div>
+
+    <!-- Booking Section -->
+    <div class="right-section">
+      <h3>Show Details</h3>
+      <div *ngFor="let show of shows">
+        <div class="book_show">
+          <p>Date: {{ show.date }}</p>
+          <p>Show Time: {{ show.time }}</p>
+          <p>Show duration: {{ show.duration }}</p>
+          <p>Available Seats: {{ show.seatsAvailable }}</p>
+          <button (click)="bookShow(show, movie)">Book Show</button>
+          <!-- Add more show details here as needed -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="!movie" class="no-movie">
+    <!-- No movie details to display -->
+    <p>No movie details available.</p>
+  </div>
+</ng-template>
+
+<div *ngIf="showToast" class="toast">
+  Booking successful!
+  <br />
+  <span style="color: green; font-weight: bold">Check your Profile</span>
+  <!-- You can display any message you want here -->
+</div>

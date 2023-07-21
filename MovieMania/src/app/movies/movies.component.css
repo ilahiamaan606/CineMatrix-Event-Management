@@ -1,0 +1,99 @@
+/* src/app/movie-list.component.css */
+
+/* Loading Indicator Styles */
+.loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 200px; */
+    font-size: 20px;
+  }
+  
+  /* Movie List Styles */
+  .movie-container {
+    margin: 20px;
+  }
+  
+  .movie-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .movie-card {
+    width: calc(25% - 20px); /* Four cards in one row */
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .movie-card:hover {
+    transform: translateY(-5px); /* Add a slight lift effect on hover */
+  }
+  
+  .movie-card a {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .movie-card p {
+    margin: 0;
+    color: #666;
+  }
+  
+  .movie-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 10px;
+  }
+  
+  .back_img {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -10000;
+    opacity: calc(0.5);
+    
+  }
+
+    /* Loading Indicator Styles */
+.loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    font-size: 20px;
+    position: relative; /* Add position property for the spinner container */
+  }
+  
+  /* Custom Spinner Styles */
+  .spinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-top: 4px solid #3498db; /* Change the border color to desired color */
+    animation: spin 1s linear infinite; /* Apply the spin animation */
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
+  }

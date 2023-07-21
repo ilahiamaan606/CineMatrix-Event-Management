@@ -1,0 +1,39 @@
+<!-- login.component.html -->
+<img src="https://images.pexels.com/photos/4722571/pexels-photo-4722571.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" />
+<div class="login-container">
+  <h2>Login</h2>
+  <form (submit)="login()">
+    <label for="email">Email</label>
+    <input
+      type="email"
+      id="email"
+      name="email"
+      [(ngModel)]="credentials.email"
+      required
+    />
+
+    <label for="password">Password</label>
+    <input
+      type="password"
+      id="password"
+      name="password"
+      [(ngModel)]="credentials.password"
+      required
+    />
+
+    <button type="submit" [disabled]="loading">
+      <span *ngIf="loading">Loading...</span>
+      <span *ngIf="!loading">Login</span>
+    </button>
+
+    <!-- Loading spinner -->
+    <div class="loading-spinner" *ngIf="loading">
+      <!-- Replace this with your preferred loading spinner implementation -->
+      <div class="spinner"></div>
+    </div>
+  </form>
+  <!-- Custom Prompt for Successful Login -->
+  <div *ngIf="showPrompt" class="login-prompt">
+    <span>Login successful!</span>
+  </div>
+</div>

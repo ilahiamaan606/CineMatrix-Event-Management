@@ -1,0 +1,118 @@
+/* login.component.css */
+
+
+.login-container {
+    width: 400px; /* Set the desired width */
+    height: 300px; /* Set the desired height */
+    margin: 0 auto; /* Center the login container horizontally */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #8980818e;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative; /* To position the loading spinner */
+ 
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    margin-bottom: 8px;
+  }
+  
+  input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-bottom: 15px;
+    font-size: 16px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.2s;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Center the loading spinner */
+  .loading-spinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  /* Optional: Add animations */
+  .login-container {
+    animation: fadeInUp 0.5s;
+  }
+
+  /* Add your existing CSS styles for the login container here */
+
+/* Style for the custom prompt */
+.login-prompt {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #43a047; /* Customize the background color */
+    color: #fff; /* Customize the text color */
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    opacity: 0.9;
+    z-index: 9999;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .login-prompt span {
+    display: block;
+  }
+  
+  .login-prompt.show {
+    opacity: 1;
+  }
+  
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  img {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -10000;
+    opacity: calc(0.5);
+    
+  }
+

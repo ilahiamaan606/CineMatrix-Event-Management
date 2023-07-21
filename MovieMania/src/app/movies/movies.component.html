@@ -1,0 +1,29 @@
+<!-- src/app/movie-list.component.html -->
+<img
+  class="back_img"
+  src="https://images.pexels.com/photos/436413/pexels-photo-436413.jpeg?auto=compress&cs=tinysrgb&w=600"
+  alt=""
+/>
+<div class="loading-container" *ngIf="loading; else content">
+  <!-- Custom Spinner -->
+  <div class="spinner"></div>
+</div>
+
+<ng-template #content>
+  <div class="movie-container" *ngIf="movies.length > 0; else noMovies">
+    <!-- Display movie list -->
+    <h2>Movie List</h2>
+    <div class="movie-card-container">
+      <div class="movie-card" *ngFor="let movie of movies">
+        <a [routerLink]="['/shows', movie.id]">{{ movie.Title }}</a>
+        <p>Year: {{ movie.Year }}</p>
+        <img [src]="movie.Poster" alt="{{ movie.Title }}" />
+      </div>
+    </div>
+  </div>
+
+  <ng-template #noMovies>
+    <!-- No movies to display -->
+    <p>No movies available.</p>
+  </ng-template>
+</ng-template>

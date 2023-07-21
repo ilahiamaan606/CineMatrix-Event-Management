@@ -1,0 +1,128 @@
+/* Reset default styles for the nav */
+
+nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 1.2rem;
+    margin-bottom: 1rem;
+
+  }
+  
+  .nav_body{
+    margin-right: 2rem;
+  }
+
+  /* Style the navigation links */
+  nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 10px 20px;
+    margin: 0 5px;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  /* Add underline for the active link */
+  nav .underline {
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    height: 3px;
+    width: 0;
+    background-color: #007bff;
+    transition: width 0.3s ease-in-out;
+  }
+  
+  /* Add hover effect to the links */
+  nav a:hover {
+    color: #007bff;
+    width: 100%;
+    text-decoration: underline;
+    
+  }
+  
+  /* Add hover effect to the underline */
+  nav a:hover + .underline {
+    width: 100%;
+  }
+  
+  /* Optional: Center the nav and add some space at the top */
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f5f5f5;
+  }
+  
+/* Style the logo container */
+.logo {
+    border: 1px solid rgba(0, 0, 0, 0.514);
+    height: 30px;
+    width: 30px; 
+    margin-left: 1.5rem;
+    padding: 0.3rem;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+  }
+  .logo img {
+    width: 100%;
+    height: auto; 
+    border-radius: 50%; 
+  }
+
+
+  @media (max-width: 800px) {
+    nav {
+      flex-wrap: wrap; /* Allow the navigation items to wrap to the next line */
+      justify-content: space-around; /* Adjust the alignment for smaller screens */
+    }
+  
+    nav a {
+      margin: 5px 10px; /* Adjust the margin for smaller screens */
+    }
+  
+    .underline {
+      display: none; /* Hide the underline on smaller screens */
+    }
+  }
+
+  .welcome-heading {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    display: inline-block;
+    position: relative;
+    transition: transform 0.3s ease;
+  }
+  
+  .welcome-heading::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: #333;
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    transition: width 0.3s ease;
+  }
+  
+  .welcome-heading:hover {
+    transform: translateX(5px); /* Add a small translation on hover */
+    cursor: pointer;
+    color: #007bff;
+  }
+  
+  .welcome-heading:hover::after {
+    width: 100%; /* Extend the underline on hover */
+  }
+  

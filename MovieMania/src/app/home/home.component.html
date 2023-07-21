@@ -1,0 +1,132 @@
+<body>
+  <div class="landing-wrapper">
+    <!-- Your landing page content goes here -->
+    <header>
+      <!-- Header content -->
+
+      <img
+        class="back_img"
+        src="https://images.pexels.com/photos/3131971/pexels-photo-3131971.jpeg?auto=compress&cs=tinysrgb&w=600"
+        alt=""
+      />
+    </header>
+    <main>
+      <!-- Main content -->
+      <!-- home.component.html -->
+
+      <div class="home-container">
+        <div class="header">
+          <h1>Welcome to MovieMania Event Management</h1>
+          <p>Book your favorite movies, shows, and events with ease!</p>
+        </div>
+
+        <div class="features">
+          <div class="feature-item">
+            <i class="fa fa-film"></i>
+            <h3>Explore Movies</h3>
+            <p>Discover a wide range of movies and check their show timings.</p>
+          </div>
+
+          <div class="feature-item">
+            <i class="fa fa-calendar-alt"></i>
+            <h3>Attend Events</h3>
+            <p>
+              Participate in exciting events and get a chance to meet your
+              favorite stars.
+            </p>
+          </div>
+
+          <div class="feature-item">
+            <i class="fa fa-ticket-alt"></i>
+            <h3>Book Tickets</h3>
+            <p>
+              Securely book your movie and event tickets online in just a few
+              clicks.
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <body>
+      <div>
+        <img
+          width="100%"
+          src="https://assets-in.bmscdn.com/promotions/cms/creatives/1688970894022_bigweb.jpg"
+          alt=""
+        />
+      </div>
+      <div>
+        <div><h1>The Best Of Live Events</h1></div>
+        <div class="card">
+          <div class="image-gallery">
+            <div
+              *ngFor="let imgUrl of imgData"
+              class="image-container"
+              (click)="onSelectImage(imgUrl)"
+            >
+              <a routerLink="/events">
+                <img [src]="imgUrl" alt="Image" />
+              </a>
+            </div>
+          </div>
+          <div *ngIf="selectedImage" class="selected-image">
+            <a routerLink="/movies">
+              <img [src]="selectedImage" alt="Selected Image" />
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <h2>Explore Fun Activities</h2>
+        <div class="activity-gallery">
+          <div *ngFor="let item of activity" class="activity-container">
+            <a routerLink="/movies">
+              <img [src]="item.img" alt="Activity Image" />
+            </a>
+            <p>{{ item.name }}</p>
+          </div>
+        </div>
+      </div>
+    </body>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>About Us</h3>
+            <p>
+              24 years ago in India a seed of an idea was planted, a dream was
+              shared. Inception happened. 22 years on, we are look back at what
+              we've build. Leve it uo, and we'd love to do it all over again.
+              Here's our story
+            </p>
+          </div>
+          <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Products</a></li>
+              <li><a href="#">Contact Us</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h3>Contact Us</h3>
+            <p>Email: MovieMania@example.com</p>
+            <p>Phone: +1 (123) 456-7890</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2023 Your App Name. All rights reserved.</p>
+        <div class="social-icons">
+          <!-- Add your social media icons here if needed -->
+          <!-- Example: <i class="fab fa-facebook"></i> -->
+          <!-- Example: <i class="fab fa-twitter"></i> -->
+          <!-- Example: <i class="fab fa-instagram"></i> -->
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
